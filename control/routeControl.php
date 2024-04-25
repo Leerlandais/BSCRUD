@@ -15,6 +15,8 @@ if(isset($_GET["page"])) {
             $title = "Page Introuvable";
             include("../view/error404View.php");         
     }
+    }else if (isset($_GET["logout"])) {
+        include_once("../model/logoutModel.php");
     }else {
         $title = "Home Page via bad link";
         include("../view/homeView.php");

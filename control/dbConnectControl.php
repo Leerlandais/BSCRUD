@@ -8,6 +8,3 @@ try {
     die($errorMessage = "Problem connecting to the DB");
 }
 
-if (isset($db)) {
-    echo "Tout va bien, db est connecté --- efface ce message dans dbConnectControl.php";
-}
