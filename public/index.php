@@ -1,4 +1,10 @@
 <?php
+
+session_start();
+if (!isset($_SESSION["pageCount"])){
+    $_SESSION['pageCount'] = 0;
+}
+
 require_once("../config.php");
 require_once("../control/dbConnectControl.php");
 require_once("../control/routeControl.php");

@@ -1,6 +1,6 @@
 <hr class="border border-secondary border-1 opacity-25">
 <div class="text-center">
-    <p class="h1 animate__animated animate__zoomInUp">Bienvenue Dans Ma Nouvelle Expérience</p>
+    <p class="h1">Bienvenue Dans Ma Nouvelle Expérience</p>
 </div>
 <nav class="navbar">
 <div class="container-fluid">
@@ -50,7 +50,7 @@
               <?php
             }else  {
           ?>
-          <a class="nav-link disabled animate__animated animate__delay-2s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
+          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
           <?php
           }
           ?>

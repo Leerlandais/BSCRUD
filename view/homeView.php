@@ -13,10 +13,14 @@
     <div class="container-fluid px-5" id="timeToGo"> <!-- global container -->
     
     <?php
-    // add an IF PAGE VISITED = TRUE {include("inc/header-static.php");}
-        include("inc/header.php");
-    ?>
+    $_SESSION['pageCount']++;
     
+    if ($_SESSION["pageCount"] < 4) {
+        include("inc/header.php");
+    }else {
+        include("inc/header-static.php");
+    }
+    ?>
     <div class="container h-25"> <!-- main container -->
 
     <?php
