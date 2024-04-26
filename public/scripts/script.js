@@ -2,7 +2,7 @@ const timeToGo = document.getElementById("timeToGo");
  
 const sayBye = document.getElementById("sayBye");
 
-
+/*
 
 sayBye.addEventListener("click", function (event) {
     event.preventDefault();
@@ -10,3 +10,5 @@ sayBye.addEventListener("click", function (event) {
     timeToGo.classList.add("animate__animated", "animate__fadeOut");
 
 });
+
+*/

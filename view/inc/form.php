@@ -1,9 +1,9 @@
 <div class="row w-auto">
               <div class="col">
-            <form class="d-flex flex-column align-items-center justify-content-center" method="POST" action="./">
+            <form class="d-flex flex-column align-items-center justify-content-center" method="POST" action="">
                  <div class="form-group">
                    <label for="nomInp">Nom</label>
-                   <input type="text" class="form-control text-center" name="userNameInp" id="nomInp" aria-describedby="emailHelp" placeholder="Votre Nom">
+                   <input type="text" class="form-control text-center" name="userNameInp" id="nomInp" aria-describedby="userNameField" placeholder="Votre Nom">
                  </div>
                  <div class="form-group">
                    <label for="pwdInp">Password</label>

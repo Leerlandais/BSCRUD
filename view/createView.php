@@ -11,10 +11,14 @@
 </head>
 <body>
     
-    <?php
-
+<?php
+    $_SESSION['pageCount']++;
+    if ($_SESSION["pageCount"] < 3) {
         include("inc/header.php");
-    ?>
+    }else {
+        include("inc/header-static.php");
+    }
+    ?>s
     
     <div class="container">
 

@@ -20,6 +20,7 @@ if(isset($_GET["page"])) {
     }
     }else if (isset($_GET["logout"])) {
         include_once("../model/logoutModel.php");
+        
     }else {
         $title = "Bienvenue à mon Projet";
         include("../view/homeView.php");

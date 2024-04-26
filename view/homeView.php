@@ -14,8 +14,7 @@
     
     <?php
     $_SESSION['pageCount']++;
-    
-    if ($_SESSION["pageCount"] < 4) {
+    if ($_SESSION["pageCount"] < 3) {
         include("inc/header.php");
     }else {
         include("inc/header-static.php");
@@ -24,7 +23,17 @@
     <div class="container h-25"> <!-- main container -->
 
     <?php
-        include("inc/form.php");
+    if (isset($_GET["login"])){
+
+     include("inc/form.php"); 
+    }else {
+        ?>
+        <div class="text-center">
+        <h3>Cliquez <a href="?login">ICI</a> pour vous connecter</h3>
+        </div>
+        <?php
+    }
+
     ?>
     
     <?php

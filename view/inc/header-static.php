@@ -50,7 +50,7 @@
               <?php
             }else  {
           ?>
-          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
+          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="?login" tabindex="-1" aria-disabled="true">Connexion</a>
           <?php
           }
           ?>

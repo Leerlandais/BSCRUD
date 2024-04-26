@@ -43,16 +43,17 @@
         </li>
 -->
         <li class="nav-item">
-          <?php
+        <?php
             if (isset($_SESSION["monID"])) {
               ?>
+          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
               <?php
-            }
+            }else  {
           ?>
+          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="?login" tabindex="-1" aria-disabled="true">Connexion</a>
           <?php
+          }
           ?>
-          <a class="nav-link disabled animate__animated animate__delay-4s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
-        </li>
       </ul>
       <!--
       <form class="d-flex">

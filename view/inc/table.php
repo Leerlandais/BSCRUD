@@ -16,8 +16,12 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php
+                                    foreach($getUsers as $user) {
+                                        
+                                        ?>
                                     <tr>
-                                        <td>1</td>
+                                        <td><?=$user["nom"]?></td>
                                         <td>A Table of Two Cities</td>
                                         <td>Making a table or two</td>
                                         <td>50.825</td>
@@ -25,15 +29,9 @@
                                         <td><img src="images/pencil.svg" alt="update"></td>
                                         <td><img src="images/trash.svg" alt="delete"></td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>A Midsommer Night's Table</td>
-                                        <td>Making a table or two</td>
-                                        <td>50.825</td>
-                                        <td>4.338</td>
-                                        <td><img src="images/pencil.svg" alt="update"></td>
-                                        <td><img src="images/trash.svg" alt="delete"></td>
-                                    </tr>
+                                    <?php
+                                    }
+                                    ?>
                             </tbody>
                         </table>
                     </div>
