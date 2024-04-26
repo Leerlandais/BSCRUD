@@ -15,20 +15,20 @@
           <?php
               if(isset($_GET["page"]) && $_GET["page"] !== "home") {
           ?>
-          <a class="nav-link active animate__animated animate__delay-1s animate__fadeIn" aria-current="page" href="?page=home">Home</a>
+          <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
           <?php
             }else {
               ?>
-          <a class="nav-link disabled animate__animated animate__delay-1s animate__fadeIn" aria-current="page" href="?page=home">Home</a>
+          <a class="nav-link disabled" aria-current="page" href="?page=home">Home</a>
               <?php
             }
           ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="#">Carte</a>
+          <a class="nav-link" href="#">Carte</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link animate__animated animate__delay-3s animate__fadeIn" href="?page=create">Ajouter un Lieu</a>
+          <a class="nav-link" href="?page=create">Ajouter un Lieu</a>
         </li>
  <!--       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle animate__animated animate__delay-3s animate__fadeIn" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,12 +46,14 @@
           <?php
             if (isset($_SESSION["monID"])) {
               ?>
+          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
               <?php
-            }
+            }else  {
           ?>
+          <a class="nav-link disabled animate__animated animate__delay-2s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
           <?php
+          }
           ?>
-          <a class="nav-link disabled animate__animated animate__delay-4s animate__fadeIn" href="?logout" tabindex="-1" aria-disabled="true">Déconnexion</a>
         </li>
       </ul>
       <!--
