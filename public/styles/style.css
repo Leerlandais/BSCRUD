@@ -10,31 +10,37 @@ height: 200vh;
 }
 
 
-/*  GREEN
 
+/*  GREEN
+body {
 background: hsla(157, 14%, 57%, 1);
 background: linear-gradient(90deg, hsla(157, 14%, 57%, 1) 0%, hsla(152, 17%, 94%, 1) 100%);
 background: -moz-linear-gradient(90deg, hsla(157, 14%, 57%, 1) 0%, hsla(152, 17%, 94%, 1) 100%);
 background: -webkit-linear-gradient(90deg, hsla(157, 14%, 57%, 1) 0%, hsla(152, 17%, 94%, 1) 100%);
 background-repeat: repeat-x;
-
+height: 200vh;
+}
 
 */
 
 /*  BLUE
+body {
 background: hsla(217, 14%, 57%, 1);
 background: linear-gradient(90deg, hsla(217, 14%, 57%, 1) 0%, hsla(212, 17%, 94%, 1) 100%);
 background: -moz-linear-gradient(90deg, hsla(217, 14%, 57%, 1) 0%, hsla(212, 17%, 94%, 1) 100%);
 background: -webkit-linear-gradient(90deg, hsla(217, 14%, 57%, 1) 0%, hsla(212, 17%, 94%, 1) 100%);
 background-repeat: repeat-x;
-
+height: 200vh;
+}
 */
 
 /* RED
+body {
 background: hsla(22, 14%, 57%, 1);
 background: linear-gradient(90deg, hsla(22, 14%, 57%, 1) 0%, hsla(17, 17%, 94%, 1) 100%);
 background: -moz-linear-gradient(90deg, hsla(22, 14%, 57%, 1) 0%, hsla(17, 17%, 94%, 1) 100%);
 background: -webkit-linear-gradient(90deg, hsla(22, 14%, 57%, 1) 0%, hsla(17, 17%, 94%, 1) 100%);
 background-repeat: repeat-x;
-
+height: 200vh;
+}
 */
