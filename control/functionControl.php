@@ -34,3 +34,11 @@ if (isset($_GET["action"], $_GET["item"]) && ctype_digit($_GET["item"])) {
         header('Location: ?page=seetable');
     }
 }
+
+
+if (isset($_POST["itemNameInp"],$_POST["itemDescInp"],$_POST["itemLatInp"],$_POST["itemLonInp"])) {
+    
+    $insertItem = addItemToMap($db, $_POST["itemNameInp"],$_POST["itemDescInp"], (float) $_POST["itemLatInp"],(float) $_POST["itemLonInp"]);
+    if ($insertItem === true)
+    header('Location: ?page=seetable');
+}

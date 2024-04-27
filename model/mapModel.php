@@ -46,3 +46,26 @@ function getItemForUpdate(PDO $db, int $item) : bool | string {
 
 }
 
+function addItemToMap (PDO $db, string $name, string $desc, float $lat, float $lon) : bool | string {
+    $cleanedName = htmlspecialchars(strip_tags(trim($name)));
+    $cleanedDesc = htmlspecialchars(strip_tags(trim($desc)));
+    $cleanedLat = htmlspecialchars(strip_tags(trim($lat)));
+    $cleanedLon = htmlspecialchars(strip_tags(trim($lon)));
+
+    $sql = "INSERT INTO `map`(`map_name`, `map_desc`, `map_lat`, `map_lon`) 
+            VALUES (?, ?, ?, ?)";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(1, $cleanedName);
+    $stmt->bindValue(2, $cleanedDesc);
+    $stmt->bindValue(3, $cleanedLat);
+    $stmt->bindValue(4, $cleanedLon);
+
+    try {
+        $stmt->execute();
+        if($stmt->rowCount()===0) return false;
+        return true;
+    }catch(Exception $e) {
+        return $e->getMessage();
+    }
+
+}
