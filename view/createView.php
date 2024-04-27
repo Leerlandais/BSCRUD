@@ -18,11 +18,16 @@
     }else {
         include("inc/header-static.php");
     }
-    ?>s
+
+    if (!isset($_SESSION["monID"]) || $_SESSION["monID"] != session_id()) {
+        header ("Location: ?page=refuse");
+        exit();
+    }
+    ?>
     
     <div class="container">
 
-    <h1>Ajouter un Lieu</h1>
+    <p class="h2">Ajouter un Lieu</p>
         <p>FORM D'INSERTION ICI</p>
 
 

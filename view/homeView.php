@@ -11,10 +11,7 @@
 </head>
 <body>
     <div class="container-fluid px-5" id="timeToGo"> <!-- global container -->
-    <label for="colourGreen">Vert</label><input type="radio" name="colourChosen" value="bodyGreen" id="colourGreen">
-    <label for="colourBlue">Bleu</label><input type="radio" name="colourChosen" value="bodyBlue" id="colourBlue">
-    <label for="colourRed">Rouge</label><input type="radio" name="colourChosen" value="bodyRed" id="colourRed">
-    <button id="getColour">Changer le Couleur</button>
+
     <?php
     $_SESSION['pageCount']++;
     if ($_SESSION["pageCount"] < 3) {
@@ -34,7 +31,7 @@
         ?>
             <p><?=$errorMessage?></p>
         <?php
-    }else {
+    }else if (!isset($_SESSION["monID"]) || $_SESSION["monID"] != session_id()) {
         ?>
         <div class="text-center">
         <h3>Cliquez <a href="?login">ICI</a> pour vous connecter</h3>
@@ -45,13 +42,13 @@
     ?>
     
     <?php
+    if (isset($_SESSION["permission"]) && $_SESSION["permission"] > 7) {
+        include("inc/admin-table.php");
+    }else {
         include("inc/table.php");
+    }
     ?>
-    <?php
-        if(isset($_SESSION["monID"]) && $_SESSION["monID"] === session_id()) {
-            include("inc/add-form.php");
-        }
-    ?>
+
 
     </div> <!-- end main container -->
            

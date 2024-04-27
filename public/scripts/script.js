@@ -1,14 +1,18 @@
 const timeToGo = document.getElementById("timeToGo");
- 
 const sayBye = document.getElementById("sayBye");
-const getColour = document.getElementById("getColour")
+
 const body = document.querySelector("body");
 
-getColour.addEventListener("click", changeColour);
+const getColour = document.querySelectorAll(".dropdown-item");
+
+for (let i = 0; i < getColour.length; i++) {
+    
+    getColour[i].addEventListener("click", changeColour);
+}
 
 function changeColour() {
     body.className = "";    
-    const colourPick = document.querySelector(':checked').value;
+    const colourPick = this.id
     console.log(colourPick);
     body.classList.add(colourPick);
 

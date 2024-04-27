@@ -20,12 +20,17 @@ if (isset($_POST["userNameInp"], $_POST["userPassInp"])) {
     }
 }
 
-if (isset($_GET["action"], $_GET["item"], $_GET["confirm"]) && ctype_digit($_GET["item"]) && $_GET["confirm"] === "ok") {
+if (isset($_GET["action"], $_GET["item"], $_GET["confirm"]) && ctype_digit($_GET["item"]) && $_GET["action"] === "delete" && $_GET["confirm"] === "ok") {
     $deleteItem = deleteItemFromMapByID ($db, $_GET["item"]);
     if($deleteItem === true) {
-        header('Location: ?seetable');
+        header('Location: ?page=seetable');
     }
 }
 
 
-
+if (isset($_GET["action"], $_GET["item"]) && ctype_digit($_GET["item"])) {
+    $updateItem = getItemForUpdate ($db, $_GET["item"]);
+    if($updateItem === true) {
+        header('Location: ?page=seetable');
+    }
+}

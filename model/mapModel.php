@@ -30,3 +30,19 @@ function deleteItemFromMapByID(PDO $db, int $item) : bool | string {
     }
 }
 
+function getItemForUpdate(PDO $db, int $item) : bool | string {
+    $sql = 'SELECT *
+            FROM `map`
+            WHERE `map_id` = ?';
+    
+    try{
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(1, $item);
+    $result = $stmt->fetch(); 
+    return $result;
+    }catch(Exception $e) {
+        return $e->getMessage();
+    }
+
+}
+

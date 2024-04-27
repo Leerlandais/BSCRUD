@@ -27,9 +27,8 @@
                                         <td><?=$map["desc"]?></td>
                                         <td><?=$map["lat"]?></td>
                                         <td><?=$map["lon"]?></td>
-                                        <td><img src="images/pencil.svg" alt="update"></td>
-                                        <td><a href="?page=seetable&action=delete&item=<?=$map["map_id"]?>"><img src="images/trash.svg" alt="delete"></td></a>
-  
+                                        <td><a href="?page=seetable&action=update&item=<?=$map["map_id"]?>"><img src="images/pencil.svg" alt="update"></a></td>
+                                        <td><a href="?page=seetable&action=delete&item=<?=$map["map_id"]?>"><img src="images/trash.svg" alt="delete"></a></td>
                                     </tr>
                                     <?php
                                     }

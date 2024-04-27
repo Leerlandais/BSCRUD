@@ -17,10 +17,7 @@ if (!isset($_SESSION["permission"]) || $_SESSION["permission"] < 8) {
 </head>
 <body>
     <div class="container-fluid px-5" id="timeToGo"> <!-- global container -->
-    <label for="colourGreen">Vert</label><input type="radio" name="colourChosen" value="bodyGreen" id="colourGreen">
-    <label for="colourBlue">Bleu</label><input type="radio" name="colourChosen" value="bodyBlue" id="colourBlue">
-    <label for="colourRed">Rouge</label><input type="radio" name="colourChosen" value="bodyRed" id="colourRed">
-    <button id="getColour">Changer le Couleur</button>
+
     <?php
     $_SESSION['pageCount']++;
     if ($_SESSION["pageCount"] < 3) {
@@ -39,6 +36,8 @@ if (!isset($_SESSION["permission"]) || $_SESSION["permission"] < 8) {
     <?php
         if (isset($_GET["action"]) && $_GET["action"] === "delete") {
             include("inc/delete-table.php");
+        }else if (isset($_GET["action"]) && $_GET["action"] === "update") {
+            include("inc/update-table.php");
         }
     ?>
 
