@@ -40,15 +40,17 @@
     }
 
     ?>
-    
     <?php
+        include("inc/welcome-message.php");
+    ?>
+    <?php   /*
     if (isset($_SESSION["permission"]) && $_SESSION["permission"] > 7) {
         include("inc/admin-table.php");
     }else {
         include("inc/table.php");
-    }
+    } */
     ?>
-
+        
 
     </div> <!-- end main container -->
            
@@ -60,6 +62,6 @@
 <!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/colour-script.js"></script>
 </body>
 </html>
