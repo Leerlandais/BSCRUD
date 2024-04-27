@@ -17,3 +17,16 @@ try{
 }
 
 
+function deleteItemFromMapByID(PDO $db, int $item) : bool | string {
+    $sql = "DELETE FROM `map`
+            WHERE `map_id` = ?";
+    
+    $stmt = $db->prepare($sql);
+    try{
+        $stmt->execute([$item]);
+        return true;
+    }catch(Exception $e) {
+        return $e->getMessage();
+    }
+}
+

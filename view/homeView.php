@@ -22,7 +22,7 @@
     }else {
         include("inc/header-static.php");
     }
-    if(isset($_SESSION)) var_dump($_SESSION);
+   // if(isset($_SESSION)) var_dump($_SESSION);
     ?>
     <div class="container h-25"> <!-- main container -->
 

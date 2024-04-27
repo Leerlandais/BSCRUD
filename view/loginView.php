@@ -36,11 +36,16 @@ if (!isset($_SESSION["permission"]) || $_SESSION["permission"] < 8) {
     <?php
         include("inc/admin-table.php");
     ?>
+    <?php
+        if (isset($_GET["action"]) && $_GET["action"] === "delete") {
+            include("inc/delete-table.php");
+        }
+    ?>
 
     </div> <!-- end main container -->
            
         <?php
-        include("inc/footer.php");
+        include("inc/footer-static.php");
         ?>
     
 </div>  <!-- end global container -->

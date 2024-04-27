@@ -19,3 +19,13 @@ if (isset($_POST["userNameInp"], $_POST["userPassInp"])) {
         header ("Location: ?login");
     }
 }
+
+if (isset($_GET["action"], $_GET["item"], $_GET["confirm"]) && ctype_digit($_GET["item"]) && $_GET["confirm"] === "ok") {
+    $deleteItem = deleteItemFromMapByID ($db, $_GET["item"]);
+    if($deleteItem === true) {
+        header('Location: ?seetable');
+    }
+}
+
+
+
