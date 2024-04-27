@@ -1,3 +1,9 @@
+<!-- 
+
+Si je n'avais pas séparé les sections en "include", cette page ferait 800 lignes de code (HTML, PHP et Bootstrap) et non 50.
+
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +25,6 @@
     }else {
         include("inc/header-static.php");
     }
-   // if(isset($_SESSION)) var_dump($_SESSION);
     ?>
     <div class="container h-25"> <!-- main container -->
 
@@ -42,26 +47,5 @@
     ?>
     <?php
         include("inc/welcome-message.php");
-    ?>
-    <?php   /*
-    if (isset($_SESSION["permission"]) && $_SESSION["permission"] > 7) {
-        include("inc/admin-table.php");
-    }else {
-        include("inc/table.php");
-    } */
-    ?>
-        
-
-    </div> <!-- end main container -->
-           
-        <?php
-        include("inc/footer.php");
-        ?>
     
-</div>  <!-- end global container -->
-<!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts --><!-- scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <script src="scripts/colour-script.js"></script>
-</body>
-</html>
+    

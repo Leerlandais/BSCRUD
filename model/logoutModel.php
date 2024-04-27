@@ -1,8 +1,7 @@
 <?php
-
+// Une autre fonction que j'utiliserai pour toujours. La déconnexion de Michael. Tout ce que je dois changer, c'est l'en-tête ("Location: ") et je peux l'utiliser n'importe où (un peu comme la connexion à la base de données)
 
 $_SESSION = [];
-
 
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
@@ -12,11 +11,8 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-
 session_destroy();
-
-
   
-header("Location: ?page=home");
+header("Location: ?page=home");         // changez cela en fonction des besoins du site
 exit();
 ?>

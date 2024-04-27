@@ -1,4 +1,7 @@
 <?php
+
+// Si vous n'êtes pas de niveau administrateur, il est impossible d'accéder à cette page (la même chose pour toutes les pages qui ne sont pas destinées à être consultées par le public).
+
 if (!isset($_SESSION["permission"]) || $_SESSION["permission"] < 8) {
         header ("Location: ?page=refuse");
         exit();

@@ -1,3 +1,7 @@
+<!--
+Seulement nécessaire car Michael vérifiera sûrement ce qui se passe lorsque l'URL est manipulée.
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

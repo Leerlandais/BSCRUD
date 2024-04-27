@@ -1,4 +1,8 @@
 <?php
+/*
+C'était amusant. Auparavant, nous avions beaucoup de contrôle de routage fait à partir d'ici et très peu de dépendances à appeler.
+Il faut faire attention à l'ordre ici !
+*/
 
 session_start();
 if (!isset($_SESSION["pageCount"])){
@@ -7,9 +11,8 @@ if (!isset($_SESSION["pageCount"])){
 
 require_once("../config.php");
 require_once("../control/dbConnectControl.php");
-require_once('../model/mapModel.php');
+require_once('../model/locationModel.php');
+require_once("../model/loginModel.php");
 require_once('../control/functionControl.php');
 require_once("../control/routeControl.php");
 
-// AJOUTE LES DEPENDANCES ICI. ATTENTION À LEUR ORDRE CAR C'EST IMPORTANTE QU'ILS SONT APPELLER DANS LE BON ORDRE
-// sinon, souvent des erreurs comme 'fonction inconnu' ou 'n'existe pas'

@@ -1,3 +1,8 @@
+<!-- 
+Le formulaire pour ajouter un nouvel endroit. Réalisé comme une inclusion pour garder les pages principales dégagées du désordre.
+Même chose pour les autres 'include'
+-->
+
 <div class="row w-auto">
               <div class="col">
                 <p class="h4">Ajouter un lien ici</p>

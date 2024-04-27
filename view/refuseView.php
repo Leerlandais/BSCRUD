@@ -1,4 +1,6 @@
-
+<!--
+Celui-ci est au cas où quelqu'un essaie d'accéder à une page qui nécessite que l'utilisateur soit connecté (ou encore, en cas de manipulation d'URL).
+-->
 
 <!DOCTYPE html>
 <html lang="en">
