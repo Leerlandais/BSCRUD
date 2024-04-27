@@ -30,20 +30,19 @@ function deleteItemFromMapByID(PDO $db, int $item) : bool | string {
     }
 }
 
-function getItemForUpdate(PDO $db, int $item) : bool | string {
-    $sql = 'SELECT *
+function getOneItemById (PDO $db, $id) {
+    $sql = 'SELECT `map_id` AS `id`,`map_name` AS `nom`, `map_desc` AS `desc`, `map_lat` AS `lat`, `map_lon` AS `lon`
             FROM `map`
             WHERE `map_id` = ?';
-    
-    try{
+
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(1, $item);
-    $result = $stmt->fetch(); 
-    return $result;
+    try {
+        $stmt->execute([$id]);
+        $result = $stmt->fetch();
+        return $result;
     }catch(Exception $e) {
         return $e->getMessage();
     }
-
 }
 
 function addItemToMap (PDO $db, string $name, string $desc, float $lat, float $lon) : bool | string {
@@ -59,6 +58,36 @@ function addItemToMap (PDO $db, string $name, string $desc, float $lat, float $l
     $stmt->bindValue(2, $cleanedDesc);
     $stmt->bindValue(3, $cleanedLat);
     $stmt->bindValue(4, $cleanedLon);
+
+    try {
+        $stmt->execute();
+        if($stmt->rowCount()===0) return false;
+        return true;
+    }catch(Exception $e) {
+        return $e->getMessage();
+    }
+
+}
+
+
+function updateItemById (PDO $db, string $name, string $desc, float $lat, float $lon, int $id) : bool | string {
+    $cleanedName = htmlspecialchars(strip_tags(trim($name)));
+    $cleanedDesc = htmlspecialchars(strip_tags(trim($desc)));
+    $cleanedLat = htmlspecialchars(strip_tags(trim($lat)));
+    $cleanedLon = htmlspecialchars(strip_tags(trim($lon)));
+var_dump($cleanedName,$cleanedDesc,$cleanedLat,$cleanedLon);
+    $sql = "UPDATE `map` 
+            SET `map_name`= ?,
+                `map_desc`= ?,
+                `map_lat`= ?,
+                `map_lon`= ?
+                 WHERE `map_id` = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(1, $cleanedName);
+    $stmt->bindValue(2, $cleanedDesc);
+    $stmt->bindValue(3, (float) $cleanedLat);
+    $stmt->bindValue(4, (float )$cleanedLon);
+    $stmt->bindValue(5, $id, PDO::PARAM_INT);
 
     try {
         $stmt->execute();

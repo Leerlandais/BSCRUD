@@ -14,7 +14,7 @@ if(isset($_GET["page"])) {
             break;  
         case "seetable" :
             $title = "Ajoute un lieu à la table";
-            include("../view/loginView.php");
+            include("../view/adminView.php");
             break;
         case "refuse" :
             $title = "Nice try, fool :p";

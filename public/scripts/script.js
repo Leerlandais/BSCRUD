@@ -15,8 +15,17 @@ function changeColour() {
     const colourPick = this.id
     console.log(colourPick);
     body.classList.add(colourPick);
+    sessionStorage.setItem("colour", colourPick);
 
 }
+
+function applyColour () {
+    let colourPick = sessionStorage.getItem("colour");
+    body.className = "";  
+    body.classList.add(colourPick);
+}
+
+applyColour();
 /*
 
 sayBye.addEventListener("click", function (event) {

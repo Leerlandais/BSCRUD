@@ -37,7 +37,7 @@ if (!isset($_SESSION["permission"]) || $_SESSION["permission"] < 8) {
         if (isset($_GET["action"]) && $_GET["action"] === "delete") {
             include("inc/delete-table.php");
         }else if (isset($_GET["action"]) && $_GET["action"] === "update") {
-            include("inc/update-table.php");
+            include("inc/update-form.php");
         }
     ?>
 
