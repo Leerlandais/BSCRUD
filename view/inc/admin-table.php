@@ -11,6 +11,8 @@
                                     <th class="text-center">Description</th>
                                     <th class="text-center">Latitude</th>
                                     <th class="text-center">Longitude</th>
+                                    <th class="text-center">Modifier</th>
+                                    <th class="text-center">Supprimer</th>
 
                                 </tr>
                             </thead>
@@ -25,6 +27,8 @@
                                         <td><?=$map["desc"]?></td>
                                         <td><?=$map["lat"]?></td>
                                         <td><?=$map["lon"]?></td>
+                                        <td><img src="images/pencil.svg" alt="update"></td>
+                                        <td><a href="?page=seetable&action=delete&item=<?=$map["map_id"]?>"><img src="images/trash.svg" alt="delete"></td></a>
   
                                     </tr>
                                     <?php
@@ -37,3 +41,6 @@
 </div>
     </div>
 </div>
+
+
+

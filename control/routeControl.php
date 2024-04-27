@@ -11,7 +11,15 @@ if(isset($_GET["page"])) {
         case "create" :
             $title = "Ajoute un lieu à la table";
             include("../view/createView.php");
-            break;                
+            break;  
+        case "seetable" :
+            $title = "Ajoute un lieu à la table";
+            include("../view/loginView.php");
+            break;
+        case "refuse" :
+            $title = "Nice try, fool :p";
+            include("../view/refuseView.php");
+            break;                                          
                 // autre case ici si necessaire
 
         default :

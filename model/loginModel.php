@@ -30,7 +30,9 @@ function attemptUserLogin (PDO $db, $name, $pass) : bool | string {
 
     try {
         $stmt->execute();
+        if($stmt->rowCount()===0) return false;
         $result = $stmt->fetch();
+        
         
         if (password_verify($pass, $result['password'])) {
 
@@ -38,6 +40,7 @@ function attemptUserLogin (PDO $db, $name, $pass) : bool | string {
             unset($_SESSION['password']);
             $_SESSION['monID'] = session_id();
             $_SESSION['pageCount'] = 1;
+        
             return true;
             
         }

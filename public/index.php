@@ -7,6 +7,7 @@ if (!isset($_SESSION["pageCount"])){
 
 require_once("../config.php");
 require_once("../control/dbConnectControl.php");
+require_once('../model/mapModel.php');
 require_once('../control/functionControl.php');
 require_once("../control/routeControl.php");
 
