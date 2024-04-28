@@ -10,42 +10,46 @@
     </head>
     <body>
         <div class="container mt-2 h-auto">
-        <?php
+            <?php
             include("inc/header.php")
-        ?>
+            ?>
         <div class="container text-center">
             <p class="h2">La Carte</p>
             <?php
                 if (!isset($_SESSION["monID"]) || $_SESSION["monID"] != session_id()) { ?>
                     <p class="h3">Pour accéder à toutes les fonctionnalités de la carte, veuillez vous <a href="?login">connecter</a></p>
-                <?php    }else { ?>
-                    <p class="h3">Bonjour, <?=$_SESSION["username"]?>, où voudrais-tu aller?</p>
-                <?php    }
+                    <?php    }else { ?>
+                        <p class="h3">Bonjour, <?=$_SESSION["username"]?>, où voudrais-tu aller?</p>
+                        <?php    }
                 require_once("../control/mapJSON.php");
                 
-            ?>
+                ?>
             <div class="hidden" style="display: none"><?=var_dump($result);?></div>
         </div>
         <div class="row d-flex">
-            <div class="col-1"></div>
+            
             <div class="col-10">
-        <div id="map"></div>
-        </div>
-            <div class="col-1">
-                <ul>
-                <?php 
+                <div id="map"></div>
+            </div>
+            <div class="col-2">
+                <div class="collapse-sm navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <?php 
                     foreach ($getMaps as $map) {
                         ?>
-                        <li><?=$map["nom"]?></li>
+                        <li class="nav-item">
+                            <a href="?page=showmap&lat=<?=$map["lat"]?>&lon=<?=$map["lon"]?>&nom=<?=$map["nom"]?>&id=<?=$map["map_id"]?>" class="mapLink link-opacity-75 link-opacity-100-hover text-decoration-none fs-5"><?=$map["nom"]?></a>
+                        </li>
                         <?php
                     }   
-                ?>
+                    ?>
                 </ul>
             </div>
         </div>
-        <?php
+    </div>
+    <?php
             include("inc/footer.php");
-        ?>
+            ?>
 <!--  Script Leaflet  -->
 <script src=" https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <!-- Script BS -->
