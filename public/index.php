@@ -16,3 +16,5 @@ require_once("../model/loginModel.php");
 require_once('../control/functionControl.php');
 require_once("../control/routeControl.php");
 
+
+$db = null;

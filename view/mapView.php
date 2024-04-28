@@ -35,13 +35,15 @@
                 <div class="collapse-sm navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <?php 
+                        if (isset($_SESSION["monID"]) && $_SESSION["monID"] === session_id()) {
                     foreach ($getMaps as $map) {
                         ?>
                         <li class="nav-item">
                             <a href="?page=showmap&lat=<?=$map["lat"]?>&lon=<?=$map["lon"]?>&nom=<?=$map["nom"]?>&id=<?=$map["map_id"]?>" class="mapLink link-opacity-75 link-opacity-100-hover text-decoration-none fs-5"><?=$map["nom"]?></a>
                         </li>
                         <?php
-                    }   
+                    }  
+                } 
                     ?>
                 </ul>
             </div>
