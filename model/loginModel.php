@@ -19,7 +19,7 @@ try{
 }
 
 
-function attemptUserLogin (PDO $db, $name, $pass) : bool | string {
+function attemptUserLogin (PDO $db, string $name, string $pass) : bool | string {
     
     $sql = "SELECT *
             FROM `users`

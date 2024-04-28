@@ -67,5 +67,6 @@ if (!isset($_SESSION["permission"]) || $_SESSION["permission"] < 8) {
     <script src="extensions/natural-sorting/bootstrap-table-natural-sorting.js"></script>
     <script src="scripts/colour-script.js"></script>
     <script src="scripts/checkbox-script.js"></script>
+    <script src="scripts/insertScript.js"></script>
 </body>
 </html>

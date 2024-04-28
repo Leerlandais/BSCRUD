@@ -3,7 +3,7 @@
 // celui-ci contient toutes les fonctions liées à l'ajout, à la modification ou à la suppression des lieux (et à leur affichage, bien sûr)
 // Pas besoin d'étiqueter les fonctions car leurs noms disent tout
 
-function getAllMaps(PDO $db) {
+function getAllMaps(PDO $db) : array | string {
     $sql = "SELECT `map_id`,`map_name` AS `nom`,`map_desc` AS `desc`, `map_lat` AS `lat`, `map_lon` AS `lon` 
             FROM `map` 
             ORDER BY `map_id` DESC";
@@ -33,7 +33,7 @@ function deleteItemFromMapByID(PDO $db, int $item) : bool | string {
     }
 }
 
-function getOneItemById (PDO $db, $id) {
+function getOneItemById (PDO $db, int $id) : array | string {
     $sql = 'SELECT `map_id` AS `id`,`map_name` AS `nom`, `map_desc` AS `desc`, `map_lat` AS `lat`, `map_lon` AS `lon`
             FROM `map`
             WHERE `map_id` = ?';
