@@ -14,8 +14,8 @@ fetch("../control/mapJSON.php")
     .then(function (response) {
         response.json().then(function (data) {
             console.log(data);
-            afficheMarqueurs(data);
-            afficheListe(data);
+            placeMarkers(data);
+            affichemarker(data);
         });
     })
     .catch(function (error) {
@@ -26,7 +26,10 @@ fetch("../control/mapJSON.php")
     
     console.log(hiddenJSON.textContent);
     */
-
+    map.flyTo([flyLat, flyLon], 19, {
+        animate: true,
+        duration: 3 // in seconds
+      });
 
     
 const markerTable = [];
@@ -47,13 +50,20 @@ params.forEach(function(param) {
         id = splitParam[1];
     }
 });
-// console.log("Latitude:", lat);
-// console.log("Longitude:", lon);
- console.log("Title:", nom, "lat = ",lat,"lon = ",lon,"nom = ",nom,"id = ",id);
+
+// console.log("Title:", nom, "lat = ",lat,"lon = ",lon,"nom = ",nom,"id = ",id);
 markerTable.push({"lat":lat,"lon":lon,"nom":nom,"id":id});
 }
 
-map.flyTo([flyLat, flyLon], 19, {
-    animate: true,
-    duration: 2 // in seconds
-  });
+placeMarkers(markerTable);
+
+function placeMarkers(marker){
+    for (let item in marker){
+    //    console.log(marker[item].lat, marker[item].lon);
+        let thisMarker = L.marker([marker[item].lat, marker[item].lon]).addTo(map);
+        thisMarker.bindPopup(`<h4>${marker[item].nom}</h4>`);
+        markerTable.push(thisMarker);
+    }
+
+
+}

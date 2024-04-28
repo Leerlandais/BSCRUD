@@ -6,7 +6,7 @@
   <li class="list-group-item bg-transparent border-bottom border-success">En plus du style, toutes les tables et les formulaires sont Bootstrap et non pas le CSS traditionnel.</li>
   <li class="list-group-item bg-transparent border-bottom border-success">C'est la première fois que j'expérimente avec l'animation. Un grand pas par rapport à mon aspect habituel terne et statique</li>
   <li class="list-group-item bg-transparent border-bottom border-success">Comme il n'y avait pas d'exigence particulière de la part d'André, et que c'est sa dernière TI, j'ai ajouté l'option de changement de couleur &lpar;stockage de session, ahoy&rpar;.</li>
-  <li class="list-group-item bg-transparent border-bottom border-success">And a fifth one</li>
+  <!-- <li class="list-group-item bg-transparent border-bottom border-success">And a fifth one</li> -->
 </ul>
 
 </div>
