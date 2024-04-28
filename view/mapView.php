@@ -32,9 +32,15 @@
         <div id="map"></div>
         </div>
             <div class="col-1">
+                <ul>
                 <?php 
-                    // FOREACH MAP LINKS HERE    
+                    foreach ($getMaps as $map) {
+                        ?>
+                        <li><?=$map["nom"]?></li>
+                        <?php
+                    }   
                 ?>
+                </ul>
             </div>
         </div>
         <?php
