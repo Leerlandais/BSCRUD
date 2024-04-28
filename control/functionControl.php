@@ -3,7 +3,7 @@
 // J'ai décidé d'utiliser un contrôleur séparé pour stocker tous les appels de fonction
 
 
-$getUsers = getAllUsers ($db);
+// $getUsers = getAllUsers ($db);
 $getMaps = getAllMaps($db);
 
 
