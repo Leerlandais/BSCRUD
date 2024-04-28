@@ -40,6 +40,9 @@
                     <div class="container">
                 <div class="row">
                     <div class="col-12">
+                        <?php 
+                         if (isset($_SESSION["monID"]) && $_SESSION["monID"] === session_id()) {
+                            ?>
                     <div class="table-responsive">
                         <table class="table bg-transparent" data-toggle="table" data-show-columns="false" data-search="false" data-pagination="true" data-checkbox-header="true">
                             <!-- J'ai ajouté l'animation ici car sinon, BS fait un bizarre effet -->
@@ -59,6 +62,7 @@
 
                                     <?php
                                     }
+                                }
                                     ?>
                             </tbody>
                         </table>
