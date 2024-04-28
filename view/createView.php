@@ -30,7 +30,7 @@
     <p class="h2 text-center">Ajouter un Lieu</p>
     
     <?php
-    include("inc/insert-form.php");
+        include("inc/insert-form.php");
     ?>
 
 

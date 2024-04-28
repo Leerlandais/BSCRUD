@@ -48,6 +48,7 @@ updateForm.addEventListener("submit", function(event) {
 
 function validateInputsForUpdate () {
        insertError.textContent = ""
+       
        let nom  = nomInpUpdate.value;
        let desc = descInpUpdate.value;
        let lat  = latInpUpdate.value;

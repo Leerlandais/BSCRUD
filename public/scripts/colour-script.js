@@ -13,32 +13,34 @@ for (let i = 0; i < getColour.length; i++) {
 function changeColour() {
     body.className = "";    
     const colourPick = this.id
-    console.log(colourPick);
-    body.classList.add(colourPick);
+        body.classList.add(colourPick);
+    
     sessionStorage.setItem("colour", colourPick);
-    applyColour();
+        applyColour();
 }
 
 function applyColour () {
     let colourPick = sessionStorage.getItem("colour");
-    switch(colourPick) {
-        case "bodyRed" :
-            bootstrapColour = "border-danger";
-            break;
-        case "bodyGreen" :
-            bootstrapColour = "border-success";
-            break;
-        case "bodyBlue" :
-            bootstrapColour = "border-info";
-            break;
-        case "bodyClassic" :
-            bootstrapColour = "border-secondary";
-            break;
-        default :
-        bootstrapColour = "border-secondary";                                    
-    }
+        switch(colourPick) {
+            case "bodyRed" :
+                bootstrapColour = "border-danger";
+                break;
+            case "bodyGreen" :
+                bootstrapColour = "border-success";
+                break;
+            case "bodyBlue" :
+                bootstrapColour = "border-info";
+                break;
+            case "bodyClassic" :
+                bootstrapColour = "border-secondary";
+                break;
+            default :
+            bootstrapColour = "border-secondary";                                    
+        }
+
     body.className = "";  
     body.classList.add(colourPick);
+    
     for (let i = 0; i < listItem.length; i++) {
        listItem[i].className = "";
        listItem[i].classList.add("list-group-item");

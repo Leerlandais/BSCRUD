@@ -5,10 +5,11 @@ Il faut faire attention à l'ordre ici !
 */
 
 session_start();
-if (!isset($_SESSION["pageCount"])){
+    if (!isset($_SESSION["pageCount"])){
     $_SESSION['pageCount'] = 0;
-}
+    }
 
+    
 require_once("../config.php");
 require_once("../control/dbConnectControl.php");
 require_once('../model/locationModel.php');
