@@ -34,7 +34,7 @@
             <div class="col-2">
                 <div class="collapse-sm navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <?php 
+                        <?php                   //   FIX IT FOR PAGINATION
                         if (isset($_SESSION["monID"]) && $_SESSION["monID"] === session_id()) {
                     foreach ($getMaps as $map) {
                         ?>

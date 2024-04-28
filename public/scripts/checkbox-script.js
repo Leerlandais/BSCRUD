@@ -1,13 +1,11 @@
-// Ne fonctionne pas comme j'ai voulu 
 
 
-/*
-setTimeout(() => {
-    
-    var checkboxes = document.querySelectorAll('tr');
-
-    for (x of checkboxes) {
-        x.classList.remove("selected");
-    }
-}, 10);
-*/
+    setTimeout(() => {
+        
+        const checkboxes = document.querySelectorAll('tr input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = false; 
+            checkbox.closest('tr').classList.remove("selected"); 
+        });
+        
+    }, 100);
