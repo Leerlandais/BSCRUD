@@ -17,8 +17,12 @@ if(isset($_GET["page"])) {
                     case "refuse" :
                         $title = "Nice try, fool :p";
                         include("../view/refuseView.php");
-                        break;                                          
-                        // autre case ici si necessaire
+                        break;
+                        case "showmap" :
+                            $title = "Voir la Carte";
+                            include("../view/mapView.php");
+                            break;                                          
+                      
                         
                         default :
                         $title = "Page Introuvable";

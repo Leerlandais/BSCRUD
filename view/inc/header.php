@@ -25,7 +25,7 @@
           ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="#">Carte</a>
+          <a class="nav-link animate__animated animate__delay-2s animate__fadeIn" href="?page=showmap">Carte</a>
         </li>
         <li class="nav-item">
           <a class="nav-link animate__animated animate__delay-3s animate__fadeIn" href="?page=create">Ajouter un Lieu</a>

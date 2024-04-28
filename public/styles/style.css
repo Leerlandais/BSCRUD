@@ -37,3 +37,7 @@ background: -webkit-linear-gradient(-90deg, hsla(22, 14%, 57%, 1) 0%, hsla(17, 1
 background-repeat: repeat-x;
 height: 200vh;
 }
+
+#map {
+    height: 600px;
+}

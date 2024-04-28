@@ -42,6 +42,8 @@ try {
         $_SESSION['pageCount'] = 1;       
         return true;
         
+    }else{
+        return false;
     }
 }catch (Exception $e) {
     return $e->getMessage();

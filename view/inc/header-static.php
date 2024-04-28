@@ -25,7 +25,7 @@
           ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Carte</a>
+          <a class="nav-link" href="?page=showmap">Carte</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="?page=create">Ajouter un Lieu</a>

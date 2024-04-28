@@ -17,7 +17,10 @@
                    <label for="itemLon">Longitude</label>
                    <input type="text" class="form-control text-center" name="updateLonInp" id="lonInpUpdate" aria-describedby="updateLonField" placeholder="<?=$updateItem["lon"]?>" value="<?=$updateItem["lon"]?>">
                  </div>
+                 <div class="form-group">
                  <button type="submit" class="btn btn-dark rounded-pill mt-3" id="sayBye">Changer</button> 
+                 <badge class="btn btn-dark rounded-pill mt-3"><a href="?page=seetable">Annuler</a></badge> 
+                 </div>
                 </form>
                 <p class="h3 text-center text-warning" id="insertError"></p>
                 </div>

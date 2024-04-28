@@ -1,6 +1,6 @@
 <div class="container mt-5">
 <hr class="border border-secondary border-1 opacity-25">
-<li class="nav-item dropdown list-unstyled">
+<li class="nav-item dropdown list-unstyled d-flex">
 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Couleur
   </button>

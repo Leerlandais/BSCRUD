@@ -20,6 +20,7 @@ Celui-ci est au cas où quelqu'un essaie d'accéder à une page qui nécessite q
                 <div class="col text-center">
                     <p class="h1 mt-5">Accès Refusé</p>
                     <p class="h3">Désolé, vous ne disposez pas des autorisations nécessaires pour accéder à cette page.</h3>
+                    <p class="h4">Veuillez vous <a href="?login">connecter</a> pour continuer</p>
                 </div>
             </div>
         </div>
