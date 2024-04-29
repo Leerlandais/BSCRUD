@@ -38,14 +38,13 @@
             <div class="col-3">
                 
                     <div class="container">
-                <div class="row">
-                    <div class="col-12">
+               
+                    
                         <?php 
                          if (isset($_SESSION["monID"]) && $_SESSION["monID"] === session_id()) {
                             ?>
                     <div class="table-responsive">
-                        <table class="table bg-transparent" data-toggle="table" data-show-columns="false" data-search="false" data-pagination="true" data-checkbox-header="true">
-                            <!-- J'ai ajouté l'animation ici car sinon, BS fait un bizarre effet -->
+                        <table class="table" data-toggle="table" data-show-columns="false" data-search="false" data-pagination="true">
                         <thead>
                                 <tr>
                                     <th class="text-center bg-transparent">Choissisez votre destination</th>
@@ -54,21 +53,19 @@
                             <tbody>
                                 <?php
                                     foreach($getMaps as $map) {
-                                        
                                         ?>
                                     <tr>
-        
                                         <td><a href="?page=showmap&lat=<?=$map["lat"]?>&lon=<?=$map["lon"]?>&nom=<?=$map["nom"]?>&id=<?=$map["map_id"]?>" class="mapLink link-opacity-75 link-opacity-100-hover text-decoration-none fs-5"><?=$map["nom"]?></a></td>
-
                                     <?php
                                     }
                                 }
                                     ?>
+                                    </tr>
                             </tbody>
                         </table>
+                   
                     </div>
-                    </div>
-                </div>
+               
 </div>
 </div>
 </div>
